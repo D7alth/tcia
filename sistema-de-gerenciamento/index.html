@@ -21,10 +21,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 <script type="text/javascript">
    document.addEventListener('DOMContentLoaded', function() {
     var userLang = navigator.language || navigator.userLanguage;
-    if (userLang === "en") {
-        window.location.href = "/en";
-    } else {
-        window.location.href = "default.php";
+    var currentPage = window.location.pathname;
+
+    if (userLang === "en" && !currentPage.startsWith("/en")) {
+        window.location.href = "/en" + currentPage;
     }
 });
     </script>
