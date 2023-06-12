@@ -23,7 +23,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
     var userLang = navigator.language || navigator.userLanguage;
     var currentPage = window.location.pathname;
 
-    if (userLang === "en" && !currentPage.startsWith("/en")) {
+    if (userLang.startsWith("en") && !currentPage.startsWith("/en")) {
         window.location.href = "/en" + currentPage;
     }
 });
